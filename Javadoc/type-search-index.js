@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"RateLimiter","l":"Api"},{"p":"RateLimiter","l":"ApiIndex"},{"p":"RateLimiter","l":"Manager"},{"p":"RateLimiter","l":"TestRun"},{"p":"RateLimiter","l":"TestRunThread"},{"p":"RateLimiter","l":"TestThrottle"},{"p":"RateLimiter","l":"Throttle"},{"p":"RateLimiter","l":"User"}];updateSearchResults();
