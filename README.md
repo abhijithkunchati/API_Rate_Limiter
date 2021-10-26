@@ -53,7 +53,7 @@ For more detailed information on each class and the
 methods involved please open the “allclasses-index.html” file
 present in the “Javadoc” folder from there you can navigate to
 each class and look at the detailed information. 
-# my approach for the solution and design considerations
+# My approach for the solution and design considerations
 ## Algorithm:
 There are many algorithms present for tracking the API calls, each with its
 pros and cons. I considered a few of them, Fixed-window, Sliding logs,
