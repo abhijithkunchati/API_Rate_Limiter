@@ -1,0 +1,33 @@
+===================================Setting up and Running the Project==================================================
+
+1. Open Eclipse -> File-> Open projects from file system ->
+ -> Navigate to this folder and choose RateLimiter.
+2. I created some classes for demonstration and testing purposes.
+“TestRun.java“ will be the entry point for testing the application.
+There are variables provided in that class that you can configure for simulating
+the API requests.
+
+
+NOTE: I only included comments wherever we felt it’s necessary.
+For more detailed information about each class and its methods, Please open
+“allclasses-index.html” present in the “Javadoc” folder. From there you can click
+on each class and navigate to their respective documentation.
+
+For a general overview of how the project works, please read pages 2 and 3 of
+the Report.
+
+====================================Application Work Flow==========================================================
+1. First we create a manager instance and add user “abhi” and an API “/dev”.
+2. User object with ID as “abhi” will be created and added in the manager object
+and an API with ID “/dev” will be added to the API Index.
+3. When we call the requested method of manager instance, it will identify the
+User with the ID and passes the request to it.
+4. when the user object receives the request it looks for the API mentioned.
+5. Since we didn’t explicitly add an API in our user object for tracking, it looks in
+the API index.
+6. The API will be present in the API index, so the user object will add the API with
+the default limit and start tracking.
+7. The request will be sent to the newly added API object.
+8. The API will calculate the requests and compares them with the limit and
+Since the limit is not exceeded it gives the status to the throttle object and calls
+the “notExceeded” method in the throttle.
