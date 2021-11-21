@@ -63,7 +63,7 @@ frames of some size and count the number of requests the user sends in
 that time frame and compare them against the limit. The main issue with
 this approach is that the user sends all the requests at the end of a time
 frame and also during the start of the next frame. They can send double the
-number of requests alloId and it will cause spikes which may affect the
+number of requests allowed and it will cause spikes which may affect the
 services.
 Sliding logs is the most accurate implementation. you keep track of every
 request in the form of logs and keep removing old logs. For each request,
@@ -75,7 +75,7 @@ window algorithms combine the best of Fixed Window and Sliding Log
 algorithms. A counter for a time period is used, similar to the fixed window
 algorithm but here I also consider the number of requests in the previous
 window to help smooth outbursts of traffic.
-we take the number of requests in my current window and add some weightage
+we take the number of requests in the current window and add some weightage
 from the number of requests in the previous window and compare the final sum
 against the given limit and take necessary actions. This is both memory efficient
 and also simple to implement.
@@ -85,7 +85,7 @@ is exceeded or not.
 But, since creating a class for a callback and providing necessary methods
 gives a lot more functionality and flexibility during implementation, I went
 with creating an abstract class Throttle, which can be extended and
-configured as per my needs.
+configured as per the needs.
 ### Single-Threaded vs Multi-Threaded :
 Although a single-threaded design is clean and simple, if the request takes
 some time to get processed, other API calls will get blocked, to achieve
